@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block body %}
-
-    {% for entry in entry %}
-         {{entry | safe}}
-    {% endfor %}
-
+    {%if entry == None %}
+     <h1>Page Not Found</h1>
+    {%else%}
+        {{entry | safe}}
+    {%endif%}
 {% endblock %}
